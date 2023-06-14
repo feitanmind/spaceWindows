@@ -12,7 +12,7 @@
     <!-- Struktura okienek -->
     <div class="spaceWindow">
         <div class="spaceWindow-topBar">
-            <div class="spaceWindow-topBar-title">
+            <div class="spaceWindow-topBar-title" onmousedown="SpaceWindow.moveWindow(this)" onmouseup="SpaceWindow.stopMoving(this)">
                 Window title
             </div>
             <div class="spaceWindow-topBar-minimalizeButton spaceWindow-topBar-button">
@@ -34,5 +34,6 @@
         </div>
     </div>
     <!-- Koniec struktury okienek-->
+    <script src="spaceWindow.js"></script>
 </body>
 </html>

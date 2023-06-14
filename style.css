@@ -5,7 +5,10 @@
 }
 .spaceWindow
 {
-    position:absolute;
+    position:fixed;
+    z-index: 20;
+    top: 20px;
+    left: 24px;
     border: solid gray 1px;
     width: var(--spaceWindow-custom-width);
     height: var(--spaceWindow-custom-height);
@@ -27,9 +30,11 @@
     flex-grow: 1;
 }
 .spaceWindow-topBar-button{
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     cursor: pointer;
 }
 

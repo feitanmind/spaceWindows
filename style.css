@@ -12,7 +12,7 @@
     border: solid gray 1px;
     width: var(--spaceWindow-custom-width);
     height: var(--spaceWindow-custom-height);
-    display: flex;
+    display: none;
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -37,4 +37,6 @@
     padding-right: 10px;
     cursor: pointer;
 }
-
+.showSpaceWindow{
+    display: flex;
+}

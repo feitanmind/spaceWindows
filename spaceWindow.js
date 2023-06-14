@@ -3,6 +3,18 @@ let spaceWindowMoving = false;
 window.addEventListener('mousemove',(event) => {
     mousePosition = { x: event.clientX, y: event.clientY};
 })
+let spaceWindowsButtons = document.getElementsByClassName("spaceWindow-startButton");
+for(let spaceWindowButton of spaceWindowsButtons)
+{
+    console.log("i");
+    spaceWindowButton.addEventListener('click',(event) => {
+        let spaceWindowId = event.target.getAttribute("targetSpaceWindowId");
+        let spaceWindow = document.getElementById(spaceWindowId);
+        spaceWindow.setAttribute("class","spaceWindow showSpaceWindow");
+    })
+}
+
+
 class SpaceWindow
 {
     static moveWindow(topBar)
@@ -26,7 +38,7 @@ class SpaceWindow
     static createNewWindow(title = "New Window", htmlBody = "HTML body")
     {
         let newSpaceWindow = document.createElement("div");
-        newSpaceWindow.setAttribute("class","spaceWindow");
+        newSpaceWindow.setAttribute("class","spaceWindow showSpaceWindow");
         let codeOfWindow = `
         <div class="spaceWindow-topBar">
             <div class="spaceWindow-topBar-title" onmousedown="SpaceWindow.moveWindow(this)" onmouseup="SpaceWindow.stopMoving(this)">

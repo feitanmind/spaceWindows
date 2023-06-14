@@ -1,4 +1,20 @@
+:root{
+    --spaceWindow-custom-width: 640px;
+    --spaceWindow-custom-height: 400px;
+    --spaceWindow-color-primary: linear-gradient(90deg, rgba(101,41,61,1) 0%, rgba(32,32,64,1) 42%, rgba(43,61,65,1) 100%);; 
+}
 .spaceWindow
 {
+    position:absolute;
     border: solid gray 1px;
+    width: var(--spaceWindow-custom-width);
+    height: var(--spaceWindow-custom-height);
+    display: flex;
+    flex-direction: column;
+}
+.spaceWindow-topBar
+{
+    width: 100%;
+    height: 35px;
+    background: var(--spaceWindow-color-primary);
 }
